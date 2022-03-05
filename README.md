@@ -8,21 +8,26 @@ In this repository we investigate the blood flow in a cylindrical blood vessel a
 3. Blood flow in a microvascular network - Newtonian
 4. Blood flow in a microvascular network - non-Newtonian (Bingham fluid)
 
-In this folder, we have ????????????????? MATLAB files, all handling different aspects of the enitre project:
+
+
+In this folder, we have 6 MATLAB files, all handling different aspects of the enitre project:
+
+Blood_system_plot.m - Plots the microvascular system where we have a branching of a channel.
+
+Newtonian_single_vessel_vel_profile - Plots the Poiseuille velocity profile in a pipe
+
+Newtonian_microvascular_network.m - Plots the pressure in the network, the flow rate in the experimental channel for varying its vascular resistance. We also use eperimental data to find the flow rate for different level of oxygen in the blood.
+
+Non_Newtonian_Bingham_single_vessel.m - Plots the velocity profile of a Bingham fluid in a pipe, for different values of yield stress.
+
+Non-Newtonian_Bingham_Microv_network_flow_rates.m - Plots the flow rates in all the blood vessels when we increase the inflow pressure. We also plot the behaviour of the wall shear stress in each channel, as well as the evolution of the pressure at the bifurcation node.
+
+Non-Newtonian_Bingham_Microv__network_tau02_changed.m - Plots the flow rates in all the vessels when the yield stress in the experimental channel is increased.
 
 
 
+For the experimental results in Newtonian_microvascular_network.m, please find attached the Excel file 'Experimental_values_and_our_results', which contains values measured by experimental researchers at the University of Minnesota, and our results for the pressure at the bifurcation node.
 
 
-data.py -The preprocessing of the dataset and a correlation heatmap function for data analysis of the dataset
-modelconstruct.py - Contains 2 functions, one for the general train-test splitting of the dataset and another for the standardisation of the dataset
-metrics.py - Has 5 functions setting out the 5 metrics that are explored in this project (Accuracy, confusion matrix, precision, recall and F1 Score), with some functions used again further down the line to calculate another metric (e.g precision and recall for F1 score)
-SoftmaxRegression.py, LDA.py, Knn.py and RandomForest.py - These contain the construction of the models investigated in this project in their respective files, they ran with their optimal hyperparameters
-plots.py - Holds 4 functions for hyperparameter analysis of 2 models (Random Forest and KNN) and their error functions which are then plotted
-main.py - Takes all the above together to provide a succinct overview of the project, runs all the models and displays their respective analysis graphs discussed in the Group Report. Ran upon a command line command stated below in this file.
-Note there is a plots folder too, which contains all the plots created upon running the code (these plots mainly come from the plot.py and main.py files).
-
-
-python main.py MobilePricingUpdated.csv
-Reproducing the results
-For the duration of the running of the code (the main file command), it takes roughly around 3 minutes and 30 seconds, depending on your machine. Randomness was used in this project, mainly for Random Forest, which used the parameter random_state, the random seed of 42 was used to ensure reproducible results.
+Reproducing the results:
+Each file can be run independetly of each other, and they take at most 30 seconds to produce the results, depending on your machine. 
