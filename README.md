@@ -1,5 +1,5 @@
-# MSci-Project
-Mathematical modelling of blood flow in vascular networks in health and disease
+# MSci-Project - Mathematical modelling of blood flow in vascular networks in health and disease
+
 
 In this repository we investigate the blood flow in a cylindrical blood vessel and in a microvascular network, where the flow is assumed to be firstly Newtonian, and secondly, yield stress fluid.
 
