@@ -3,7 +3,7 @@
 ## MSci Project
 
 
-In this repository we investigate the blood flow in a cylindrical blood vessel and in a microvascular network, where the flow is assumed to be firstly Newtonian, and secondly, yield stress fluid.
+In this repository we investigate the blood flow in a cylindrical blood vessel and in a microvascular network, where the flow is assumed to be firstly Newtonian, and secondly, a yield stress fluid.
 
 1. Blood flow in a single channel - Newtonian
 2. Blood flow in a single channel - non-Newtonian (Bingham fluid)
