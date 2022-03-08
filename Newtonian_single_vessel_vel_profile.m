@@ -15,28 +15,23 @@ P2m=60;
 %Need vmax to be positive, so:
 deltaP=abs(P1-P2m);
 L=1;
+G=deltaP/L;
 mu=5.008e-4; % Viscosity of blood is roughly 5 times more than the viscosity of water, viscosity of water is 1.0016 milipascals x second
 n=100; 
 r=linspace(-a,a,n);
-%We must find the maximum velocity, which occurs at r=0.
-umax=deltaP/(4*mu*L)*a.^2;
-%The mean velocity:
-u=umax*(1-r.^2/a.^2);
+
+for i=1:length(r)
+    umax=deltaP/(4*mu*L)*a.^2;
+    u(i)=umax*(1-r(i).^2/a.^2);
+    i=i+1;
+end
 figure()
-grid on;
+hold all
+grid on
 ax = gca;
 ax.FontSize = 13;
-set( ax, 'XLim', [0,1e3] )
-hold all
-if P1==P2m
-    disp('There is no pressure difference, so there is no velocity in the vessel');    
-else  % for different pressures:
-    for t=1:6
-        displacement=u*t;
-        plot(ax,displacement,r,'Color', '#0072BD','LineWidth',1.5);
-        title('Velocity profile of Poiseuille flow in a pipe')
-        xlabel('Velocity (\mum/s)');
-        ylabel('Radius (\mum)');
-        pause(1)
-    end  
-end
+plot(u,r,'LineWidth',1.5)
+title('Velocity profile of Poiseuille flow in a pipe')
+xlabel('Velocity (\mum/s)');
+ylabel('Radius (\mum)');
+hold off

@@ -37,7 +37,7 @@ plot(R23vec,Q23checkvec,'LineWidth',1.5)
 ax = gca;
 ax.FontSize = 12;
 grid on
-title({'Evolution of the flow rate Q_{23} for increasing vscular resistance R_{23}','in the experimental channel'});
+%title({'Evolution of the flow rate Q_{23} for increasing vscular resistance R_{23}','in the experimental channel'});
 xlabel(' Vascular resistance R_{23} (sPa/\mum^3)');
 ylabel('Flow rate Q_{23} (\mum^3/s)');
 
@@ -74,7 +74,7 @@ ax.FontSize = 12;
 grid on
 xlabel('Flow rate Q_{23} (\mum^3/s) ');
 ylabel('Vascular resistance R_{23} (sPa/\mum^3)');
-title('Behaviour of vascular resistance R_{23} for increasing flow rate Q_{23}')
+%title('Behaviour of vascular resistance R_{23} for increasing flow rate Q_{23}')
 hold off
 
 disp('---------')
@@ -140,7 +140,7 @@ col2=[0, 0.4470, 0.7410];
 plot(R23vec,P2mvec,'LineWidth',8,'Color',col1)
 ax = gca;
 ax.FontSize = 12;
-title({'Behaviour of pressure P_2 at the bifurcation node',' for increasing vascular resistance R_{23} in experimental channel'});
+%title({'Behaviour of pressure P_2 at the bifurcation node',' for increasing vascular resistance R_{23} in experimental channel'});
 xlabel('Vascular resistance R_{23} (sPa/\mum^3)');
 ylabel('Pressure P_2 (Pa)');
 hold on
@@ -197,7 +197,7 @@ col2=[0.8500, 0.3250, 0.0980]; %orange
 col3=[0.9290, 0.6940, 0.1250]; %yellow
 col4=[0.4660 0.6740 0.1880]; % green
 
-figure()      
+figure('Renderer', 'painters', 'Position',[10 10 600 300])     
 grid on
 a0m=scatter(R23vec(1,:),Q23mvec(1,:),60, 'k'); hold on
 a1m=scatter(R23vec(1,:),Q23mvec(1,:),60, 'MarkerEdgeColor',col1,'LineWidth',1.5); hold on
@@ -220,12 +220,13 @@ lgd1.FontSize=12;
 title(lgd1,{'Oxygen tension (% O_2)',' and the method used'})
 
 hold off
-title({'Blood flow rate in the experimental channel','for decreasing oxygen tension (% O_2)'});
+%title({'Blood flow rate in the experimental channel','for decreasing oxygen tension (% O_2)'});
 xlabel('Vascular resistance R_{23} (sPa/\mum^3)');
 ylabel('Flow rate Q_{23} (\mum^3/s)');
 
 % Plotting the pressure and the vascular resistance 
-figure()
+figure('Renderer', 'painters', 'Position',[10 10 600 300])
+
 grid on
 b0m=scatter(R23vec(1,:),P2mvec(1,:),60, 'k'); hold on
 b1m=scatter(R23vec(1,:),P2mvec(1,:),60, 'MarkerEdgeColor',col1,'LineWidth',1.5); hold on
@@ -246,6 +247,6 @@ lgd2.FontSize=12;
 title(lgd2,{'Oxygen tension (% O_2)',' and the method used'})
 hold off
 
-title({'Pressure P_2 at the bifurcation node',' for decreasing oxygen tension (%) O_2'});
+%title({'Pressure P_2 at the bifurcation node',' for decreasing oxygen tension (%) O_2'});
 xlabel('Vascular resistance R_{23} (sPa/\mum^3)');
 ylabel('Pressure at bifurcation node P_2 (Pa)');
