@@ -12,9 +12,11 @@ In this repository we investigate the blood flow in a cylindrical blood vessel a
 
 
 ## Functionality of the files
-In this folder, we have 6 MATLAB files, all handling different aspects of the enitre project:
+In this folder, we have 7 MATLAB files, all handling different aspects of the enitre project:
 
 - Blood_system_plot.m - Plots the microvascular system where we have a branching of a channel.
+
+- Bingham_flow_rate_forpressuredrop.m - Plots the nonlinear dependency of the volumetric flow rate for pressure drop in a pipe for a Bingham fluid
 
 - Newtonian_single_vessel_vel_profile - Plots the Poiseuille velocity profile in a pipe
 
@@ -28,7 +30,7 @@ In this folder, we have 6 MATLAB files, all handling different aspects of the en
 
 
 ## Experimental data
-For the experimental results in Newtonian_microvascular_network.m, please find attached the Excel file 'Experimental_values_and_our_results', which contains values measured by experimental researchers at the University of Minnesota, and our results for the pressure at the bifurcation node.
+For the experimental results in Newtonian_microvascular_network.m, we obtained the input parameters from our collaborators from the US.
 
 
 ## Reproducing the results:
