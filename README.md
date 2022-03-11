@@ -18,7 +18,7 @@ In this folder, we have 7 MATLAB files, all handling different aspects of the en
 
 - Bingham_flow_rate_forpressuredrop.m - Plots the nonlinear dependency of the volumetric flow rate for pressure drop in a pipe for a Bingham fluid
 
-- Newtonian_single_vessel_vel_profile - Plots the Poiseuille velocity profile in a pipe
+- Newtonian_single_vessel_vel_profile.m - Plots the Poiseuille velocity profile in a pipe
 
 - Newtonian_microvascular_network.m - Plots the pressure in the network, the flow rate in the experimental channel for varying its vascular resistance. We also use eperimental data to find the flow rate for different level of oxygen in the blood.
 
