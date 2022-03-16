@@ -22,7 +22,7 @@ In this folder, we have 6 MATLAB files, all handling different aspects of the en
 
 - Non_Newtonian_Bingham_single_vessel_vel_profile.m - Plots the velocity profile of a Bingham fluid in a pipe, for different values of yield stress.
 
-- Non-Newtonian_Bingham_Microv_network_flow_rates.m - Plots the flow rates in all the blood vessels when we increase the inflow pressure. We also plot the behaviour of the wall shear stress in each channel, as well as the evolution of the pressure at the bifurcation node.
+- Microv_network_Bingham_flow_rates.m - Plots the flow rates in all the blood vessels when we increase the inflow pressure. We also plot the behaviour of the wall shear stress in each channel, as well as the evolution of the pressure at the bifurcation node.
 
 - Non-Newtonian_Bingham_Microv__network_tau02_changed.m - Plots the flow rates in all the vessels when the yield stress in the experimental channel is increased.
 
