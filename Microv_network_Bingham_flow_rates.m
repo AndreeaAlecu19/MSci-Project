@@ -78,7 +78,7 @@ col1=[0, 0.4470, 0.7410]; %blue
 col2=[0.8500, 0.3250, 0.0980]; %orange
 col3=[0.9290, 0.6940, 0.1250]; %yellow
 col4=[0.6350, 0.0780, 0.1840]; %burgundy
-figure('Renderer', 'painters', 'Position',[10 10 600 300])
+figure('Renderer', 'painters', 'Position',[800 500 800 400])
 hold all
 grid on
 plot(P1vec,Q12vec,'Color',col3,'LineWidth',1.5)
@@ -96,7 +96,7 @@ title(lgd,'Flow rates (\mum^3/s)')
 hold off
 
 %% Plotting P_2 for P_1
-figure()
+figure('Renderer', 'painters', 'Position',[800 500 800 400])
 hold all
 grid on
 plot(P1vec(abs(fvalvec)<1e-5),P2vec(abs(fvalvec)<1e-5),'LineWidth',1.5)
@@ -109,21 +109,31 @@ ylabel('Pressure at bifurcation node P_2 (Pa)')
 hold off
 
 %% Plotting the wall shear stress for the inflow pressure (input parameter)
-figure()
+
+figure('Renderer', 'painters', 'Position',[800 500 800 400])
 hold all
 grid on
-plot(P1vec(abs(fvalvec)<1e-5),tauR2vec(abs(fvalvec)<1e-5),'LineWidth',1.5)
-plot(P1vec(abs(fvalvec)<1e-5),tauR3vec(abs(fvalvec)<1e-5),'LineWidth',1.5)
-plot(P1vec(abs(fvalvec)<1e-5),tauR1vec(abs(fvalvec)<1e-5),'LineWidth',1.5)
+col1=[0, 0.4470, 0.7410]; %blue
+col2=[0.8500, 0.3250, 0.0980]; %orange
+col3=[0.9290, 0.6940, 0.1250]; %yellow
+col4=[0.6350, 0.0780, 0.1840]; %burgundy
+plot(P1vec(abs(fvalvec)<1e-5),tauR3vec(abs(fvalvec)<1e-5),'Color',col3,'LineWidth',8) %yellow
+plot(P1vec(abs(fvalvec)<1e-5),tauR2vec(abs(fvalvec)<1e-5),'Color',col4,'LineWidth',2)
+
+plot(P1vec(abs(fvalvec)<1e-5),tauR1vec(abs(fvalvec)<1e-5),'Color',col1,'LineWidth',2)
 xlim([100 2000])
 ax = gca;
 ax.FontSize = 13;
 xlabel('Inflow pressure P_1 (Pa)')
 ylabel('Wall shear stress for each vessel \tau_R (Pa)')
 %title({'Behaviour of the wall shear stress in each channel','in the microvscular network for increasing the inflow pressure'})
-lgd=legend('\tau_{R_{2}} - experimental channel','\tau_{R_{3}} - bifurcation channel','\tau_{R_{1}} - inflow channel','Location','NortheastOutside')
+lgd=legend('\tau_{R_{3}} - bifurcation channel','\tau_{R_{2}} - experimental channel','\tau_{R_{1}} - inflow channel','Location','NortheastOutside')
 title(lgd,'Wall shear stress (Pa)')
 hold off
+
+
+
+
 %% Function of mass conservation at the bifurcation node
 function G=fP2(P2,P1,P3,P4,L1,L2,L3,R12,R23,R24,tau01,tau03,tau02,eta)
 P3= 0;

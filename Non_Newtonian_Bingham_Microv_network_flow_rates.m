@@ -89,8 +89,8 @@ ax = gca;
 ax.FontSize = 13;
 xlabel('Inflow pressure P_1 (Pa)')
 ylabel('Flow rates Q (\mum^3/s)')
-%title({'Flow rates in each channel of the microvascular network','for increasing values of initial pressure in the inflow channel'})
-lgd=legend('Q_{12} - inflow channel','Q_{24} - bifurcation channel','Q_{23} - experimental channel','Location','NortheastOutside')
+title({'Flow rates in each channel of the microvascular network','for increasing values of initial pressure in the inflow channel'});
+lgd=legend('Q_{12} - inflow channel','Q_{24} - bifurcation channel','Q_{23} - experimental channel','Location','NortheastOutside');
 title(lgd,'Flow rates (\mum^3/s)')
 
 hold off
@@ -105,7 +105,7 @@ ax = gca;
 ax.FontSize = 13;
 xlabel('Inflow pressure P_1 (Pa)')
 ylabel('Pressure at bifurcation node P_2 (Pa)')
-%title({'Behaviour of pressure at the bifurcation node','for increasing values of initial pressure in the inflow channel'})
+title({'Behaviour of pressure at the bifurcation node','for increasing values of initial pressure in the inflow channel'})
 hold off
 
 %% Plotting the wall shear stress for the inflow pressure (input parameter)
@@ -120,7 +120,7 @@ ax = gca;
 ax.FontSize = 13;
 xlabel('Inflow pressure P_1 (Pa)')
 ylabel('Wall shear stress for each vessel \tau_R (Pa)')
-%title({'Behaviour of the wall shear stress in each channel','in the microvscular network for increasing the inflow pressure'})
+title({'Behaviour of the wall shear stress in each channel','in the microvscular network for increasing the inflow pressure'})
 lgd=legend('\tau_{R_{2}} - experimental channel','\tau_{R_{3}} - bifurcation channel','\tau_{R_{1}} - inflow channel','Location','NortheastOutside')
 title(lgd,'Wall shear stress (Pa)')
 hold off

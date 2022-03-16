@@ -199,30 +199,26 @@ col4=[0.4660 0.6740 0.1880]; % green
 
 figure('Renderer', 'painters', 'Position',[10 10 600 300])     
 grid on
-a0m=scatter(R23vec(1,:),Q23mvec(1,:),60, 'k'); hold on
-a1m=scatter(R23vec(1,:),Q23mvec(1,:),60, 'MarkerEdgeColor',col1,'LineWidth',1.5); hold on
-a2m=scatter(R23vec(2,:),Q23mvec(2,:),60, 'MarkerEdgeColor',col2,'LineWidth',1.5); hold on
-a3m=scatter(R23vec(3,:),Q23mvec(3,:),60, 'MarkerEdgeColor',col3,'LineWidth',1.5); hold on
-a4m=scatter(R23vec(4,:),Q23mvec(4,:),60, 'MarkerEdgeColor',col4,'LineWidth',1.5); hold on
-
+a0m=scatter(Q23mvec(1,:),R23vec(1,:),60, 'k'); hold on
+a1m=scatter(Q23mvec(1,:),R23vec(1,:),60, 'MarkerEdgeColor',col1,'LineWidth',1.5); hold on
+a2m=scatter(Q23mvec(2,:),R23vec(2,:),60, 'MarkerEdgeColor',col2,'LineWidth',1.5); hold on
+a3m=scatter(Q23mvec(3,:),R23vec(3,:),60, 'MarkerEdgeColor',col3,'LineWidth',1.5); hold on
+a4m=scatter(Q23mvec(4,:),R23vec(4,:),60, 'MarkerEdgeColor',col4,'LineWidth',1.5); hold on
 hold on
-
-a0c=scatter(R23vec(1,:),Q23checkvec(1,:), 10,'k','+'); hold on
-a1c=scatter(R23vec(1,:),Q23checkvec(1,:), 10,'+','MarkerEdgeColor',col1); hold on
-a2c=scatter(R23vec(2,:),Q23checkvec(2,:), 10,'+','MarkerEdgeColor',col2); hold on
-a3c=scatter(R23vec(3,:),Q23checkvec(3,:), 10,'+','MarkerEdgeColor',col3); hold on
-a4c=scatter(R23vec(4,:),Q23checkvec(4,:), 10,'+','MarkerEdgeColor',col4); hold on
+a0c=scatter(Q23checkvec(1,:),R23vec(1,:), 10,'k','+'); hold on
+a1c=scatter(Q23checkvec(1,:),R23vec(1,:), 10,'+','MarkerEdgeColor',col1); hold on
+a2c=scatter(Q23checkvec(2,:),R23vec(2,:), 10,'+','MarkerEdgeColor',col2); hold on
+a3c=scatter(Q23checkvec(3,:),R23vec(3,:), 10,'+','MarkerEdgeColor',col3); hold on
+a4c=scatter(Q23checkvec(4,:),R23vec(4,:), 10,'+','MarkerEdgeColor',col4); hold on
 ax=gca;
 ax.FontSize = 13;
-
 lgd1=legend([a1m a2m a3m a4m a0m a0c],{'0% O_2','6% O_2','12% O_2','21% O_2','Computational method','Analytical method'}, 'Location','northeast'); 
 lgd1.FontSize=12;
 title(lgd1,{'Oxygen tension (% O_2)',' and the method used'})
-
 hold off
-%title({'Blood flow rate in the experimental channel','for decreasing oxygen tension (% O_2)'});
-xlabel('Vascular resistance R_{23} (sPa/\mum^3)');
-ylabel('Flow rate Q_{23} (\mum^3/s)');
+title({'Blood flow rate in the experimental channel','for decreasing oxygen tension (% O_2)'});
+ylabel('Vascular resistance R_{23} (sPa/\mum^3)');
+xlabel('Flow rate Q_{23} (\mum^3/s)');
 
 % Plotting the pressure and the vascular resistance 
 figure('Renderer', 'painters', 'Position',[10 10 600 300])
@@ -236,10 +232,10 @@ b4m=scatter(R23vec(4,:),P2mvec(4,:),60, 'MarkerEdgeColor',col4,'LineWidth',1.5);
 
 hold on
 b0c=scatter(R23vec(1,:),P2vec(1,:),10,'k','+'); hold on
-b1c=scatter(R23vec(1,:),P2vec(1,:),10,'r','+','MarkerEdgeColor',col1);hold on
-b2c=scatter(R23vec(2,:),P2vec(2,:),10,'g','+','MarkerEdgeColor',col1);hold on
-b3c=scatter(R23vec(3,:),P2vec(3,:),10,'b','+','MarkerEdgeColor',col1);hold on
-b4c=scatter(R23vec(4,:),P2vec(4,:),10,'m','+','MarkerEdgeColor',col1); hold on
+b1c=scatter(R23vec(1,:),P2vec(1,:),10,'+','MarkerEdgeColor',col1);hold on
+b2c=scatter(R23vec(2,:),P2vec(2,:),10,'+','MarkerEdgeColor',col2);hold on
+b3c=scatter(R23vec(3,:),P2vec(3,:),10,'+','MarkerEdgeColor',col3);hold on
+b4c=scatter(R23vec(4,:),P2vec(4,:),10,'+','MarkerEdgeColor',col4); hold on
 ax=gca;
 ax.FontSize = 13;
 lgd2=legend([b1m b2m b3m b4m b0m b0c],{'0% O_2','6% O_2','12% O_2','21% O_2','Computational method','Analytical method'}, 'Location','southeast');
